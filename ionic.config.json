@@ -1,5 +1,7 @@
 {
   "name": "ListWithImageIcon",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

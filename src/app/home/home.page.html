@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Ionic Lisview with Image Icon
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+   
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <div *ngFor = "let item of id; let i = index"> 
+  <ion-list>
+     
+    <ion-card> 
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img src={{image_icon[i]}}>
+      </ion-thumbnail>
+      <ion-label>{{name[i]}}</ion-label>
+    </ion-item>
+     </ion-card>
+  </ion-list>
+  
   </div>
+
 </ion-content>
